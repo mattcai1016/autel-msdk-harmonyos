@@ -1,0 +1,1 @@
+D:\auteldevelop\linux_msdk\examples\Harmony\entry\src\main\cpp\CMakeLists.txt

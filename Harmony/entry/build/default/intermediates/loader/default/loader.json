@@ -1,0 +1,25 @@
+{
+  "modulePathMap": {
+    "entry": "D:\\auteldevelop\\linux_msdk\\examples\\Harmony\\entry"
+  },
+  "compileMode": "esmodule",
+  "projectRootPath": "D:\\auteldevelop\\linux_msdk\\examples\\Harmony",
+  "nodeModulesPath": "D:\\auteldevelop\\linux_msdk\\examples\\Harmony\\entry\\build\\default\\intermediates\\loader_out\\default\\node_modules",
+  "byteCodeHarInfo": {},
+  "declarationEntry": [],
+  "moduleName": "entry",
+  "hspNameOhmMap": {},
+  "harNameOhmMap": {},
+  "packageManagerType": "ohpm",
+  "compileEntry": [],
+  "otherCompileFiles": [],
+  "dynamicImportLibInfo": {},
+  "routerMap": [],
+  "hspResourcesMap": {},
+  "updateVersionInfo": {},
+  "anBuildOutPut": "D:\\auteldevelop\\linux_msdk\\examples\\Harmony\\entry\\build\\default\\intermediates\\loader_out\\default\\an\\arm64-v8a",
+  "anBuildMode": "type",
+  "patchConfig": {
+    "changedFileList": "D:\\auteldevelop\\linux_msdk\\examples\\Harmony\\entry\\build\\default\\intermediates\\patch\\default\\changedFileList.json"
+  }
+}

@@ -1,0 +1,6 @@
+# ninja log v6
+3	1082	7745251243612792	CMakeFiles/autel_sdk.dir/AutelSdkMethods.cpp.o	87f320bf0ae3d99d
+1086	1284	7745251254432188	D:/auteldevelop/linux_msdk/examples/Harmony/entry/build/default/intermediates/cmake/default/obj/x86_64/libautel_sdk.so	eeafce6b4c59a0d1
+3	41	7745252306778773	clean	742aed982e631a06
+7	916	7745252363148972	CMakeFiles/autel_sdk.dir/AutelSdkMethods.cpp.o	87f320bf0ae3d99d
+916	1094	7745252372248970	D:/auteldevelop/linux_msdk/examples/Harmony/entry/build/default/intermediates/cmake/default/obj/x86_64/libautel_sdk.so	eeafce6b4c59a0d1

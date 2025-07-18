@@ -1,0 +1,78 @@
+{
+  "HVIGOR_OHOS_PLUGIN": {
+    "MODULES": [
+      {
+        "MODULE_NAME": "1043bfc77febe75fafec0c4309faccf1",
+        "API_TYPE": "stageMode",
+        "INCREMENTAL_TASKS": {
+          "BUILD_NATIVE_WITH_CMAKE": true,
+          "COMPILE_ARKTS": true
+        }
+      }
+    ],
+    "NATIVE_COMPILER": "Default",
+    "BUILD_MODE": "debug",
+    "USE_NORMALIZED_OHMURL": true
+  },
+  "HVIGOR": {
+    "IS_INCREMENTAL": true,
+    "IS_DAEMON": true,
+    "IS_PARALLEL": true,
+    "IS_HVIGORFILE_TYPE_CHECK": false,
+    "TASK_TIME": {
+      "1043bfc77febe75fafec0c4309faccf1": {
+        "PreBuild": 125735300,
+        "CreateModuleInfo": 458900,
+        "GenerateMetadata": 1720700,
+        "ConfigureCmake": 11609900,
+        "MergeProfile": 2982100,
+        "PreCheckSyscap": 528500,
+        "ProcessIntegratedHsp": 794100,
+        "BuildNativeWithCmake": 7373900,
+        "MakePackInfo": 2274500,
+        "SyscapTransform": 1745600,
+        "ProcessProfile": 131953000,
+        "ProcessRouterMap": 2054100,
+        "ProcessStartupConfig": 1589600,
+        "GenerateLoaderJson": 7871100,
+        "BuildNativeWithNinja": 178256400,
+        "CompileResource": 233911000,
+        "BuildJS": 1298000,
+        "CompileArkTS": 279105400,
+        "GeneratePkgModuleJson": 1454000,
+        "PackageHap": 48361200,
+        "SignHap": 1212100,
+        "CollectDebugSymbol": 762900,
+        "assembleHap": 167700
+      }
+    },
+    "APIS": [
+      "getHvigorConfig",
+      "getRootNodeDescriptor",
+      "getChildNode",
+      "getNodeByName",
+      "getAllNodes",
+      "getRootNode",
+      "getNodeName",
+      "getNodePath",
+      "subNodes",
+      "getExtraOption",
+      "getExtParam",
+      "getExtParams",
+      "getProperty",
+      "getProperties",
+      "getParameter",
+      "getProductName",
+      "nodesEvaluated",
+      "getCommandEntryTask",
+      "getStartParams"
+    ],
+    "CONFIG_PROPERTIES": {
+      "enableSignTask": true,
+      "skipNativeIncremental": false,
+      "hvigor_keepDependency": true
+    },
+    "TOTAL_TIME": 1065044600,
+    "BUILD_ID": "202507181505152200"
+  }
+}

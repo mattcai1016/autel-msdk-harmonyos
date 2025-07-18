@@ -1,0 +1,88 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Harmong SDK Integration Module"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Harmong SDK Integration Example"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Harmong"
+    },
+    {
+      "name": "app_title",
+      "value": "Harmong SDK Integration"
+    },
+    {
+      "name": "button_init_sdk",
+      "value": "Initialize SDK"
+    },
+    {
+      "name": "button_get_version",
+      "value": "Get SDK Version"
+    },
+    {
+      "name": "button_register_app",
+      "value": "Register Application"
+    },
+    {
+      "name": "button_check_status",
+      "value": "Check Registration Status"
+    },
+    {
+      "name": "button_destroy_sdk",
+      "value": "Destroy SDK"
+    },
+    {
+      "name": "status_not_initialized",
+      "value": "SDK not initialized"
+    },
+    {
+      "name": "status_initializing",
+      "value": "Initializing SDK..."
+    },
+    {
+      "name": "status_initialized",
+      "value": "SDK initialized successfully"
+    },
+    {
+      "name": "status_registering",
+      "value": "Registering application..."
+    },
+    {
+      "name": "status_registered",
+      "value": "Application registered successfully"
+    },
+    {
+      "name": "status_destroying",
+      "value": "Destroying SDK..."
+    },
+    {
+      "name": "status_destroyed",
+      "value": "SDK destroyed successfully"
+    },
+    {
+      "name": "label_sdk_version",
+      "value": "SDK Version"
+    },
+    {
+      "name": "label_sdk_full_version",
+      "value": "SDK FULL Version"
+    },
+    {
+      "name": "label_registration_status",
+      "value": "Registration Status"
+    },
+    {
+      "name": "status_registered_label",
+      "value": "Registered"
+    },
+    {
+      "name": "status_not_registered_label",
+      "value": "Not Registered"
+    }
+  ]
+} 
