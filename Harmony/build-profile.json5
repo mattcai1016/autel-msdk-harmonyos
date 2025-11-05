@@ -14,43 +14,51 @@
  */
 
 {
-    "app": {
-        "signingConfigs": [],
-        "products": [
-            {
-                "name": "default",
-                "signingConfig": "default",
-                "compatibleSdkVersion": "5.0.5(17)",
-                "runtimeOS": "HarmonyOS",
-                "buildOption": {
-                    "strictMode": {
-                        "caseSensitiveCheck": true,
-                        "useNormalizedOHMUrl": true
-                    }
-                }
-            }
-        ],
-        "buildModeSet": [
-            {
-                "name": "debug",
-            },
-            {
-                "name": "release"
-            }
-        ]
-    },
-    "modules": [
-        {
-            "name": "entry",
-            "srcPath": "./entry",
-            "targets": [
-                {
-                    "name": "default",
-                    "applyToProducts": [
-                        "default"
-                    ]
-                }
-            ]
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "material": {
+          "certpath": "C:/Users/pc/.ohos/config/openharmony/default_Harmony_F-8HzTJiAi9MOK45hT8HmKxbj0UcMRU_wt5KejpDdJk=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BC9D09D7FB8376474EBDB3577C96107B64B88656A41E57DE3C500821CDCEEF8F65430A3E10A8D27",
+          "profile": "C:/Users/pc/.ohos/config/openharmony/default_Harmony_F-8HzTJiAi9MOK45hT8HmKxbj0UcMRU_wt5KejpDdJk=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:/Users/pc/.ohos/config/openharmony/default_Harmony_F-8HzTJiAi9MOK45hT8HmKxbj0UcMRU_wt5KejpDdJk=.p12",
+          "storePassword": "0000001BBCE57F8EC36C9B4F117E86E9BA3D72E4D55D393C3F2EE34868C68926B6698FED7CB7E05715B3E9"
         }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": 12,
+        "compatibleSdkVersion": 12,
+        "runtimeOS": "OpenHarmony"
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
     ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
 }
