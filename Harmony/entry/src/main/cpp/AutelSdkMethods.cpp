@@ -24,6 +24,7 @@
 //#include "SdkApiManager.h"
 #include <string>
 #include <iostream>
+#include "add/add.h"
 
 
 const int DOMAIN = 0xFF00;
@@ -256,7 +257,29 @@ static napi_value GetGimbalType(napi_env env, napi_callback_info info) {
         return CreateResultObject(env, false, "Failed to get gimbal type: Unknown error");
     }
 }
+static napi_value NativeAdd(napi_env env, napi_callback_info info) {
+    size_t argc = 2;
+    napi_value args[2] = {nullptr};
 
+    napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
+
+    napi_valuetype valuetype0;
+    napi_typeof(env, args[0], &valuetype0);
+
+    napi_valuetype valuetype1;
+    napi_typeof(env, args[1], &valuetype1);
+
+    double value0;
+    napi_get_value_double(env, args[0], &value0);
+
+    double value1;
+    napi_get_value_double(env, args[1], &value1);
+
+    napi_value ret;
+    napi_create_double(env, add(value0, value1), &ret);
+
+    return ret;
+}
 EXTERN_C_START
 static napi_value Init(napi_env env, napi_value exports) {
     OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "NAPI Init called!"); // 确认模块加载
@@ -269,6 +292,7 @@ static napi_value Init(napi_env env, napi_value exports) {
         {"isSdkValidate", nullptr, IsSdkValidate, nullptr, nullptr, nullptr, napi_default, nullptr},
         {"getGimbalType", nullptr, GetGimbalType, nullptr, nullptr, nullptr, napi_default, nullptr},
         {"destroySdk", nullptr, DestroySdk, nullptr, nullptr, nullptr, napi_default, nullptr},
+        {"nativeAdd", nullptr, NativeAdd, nullptr, nullptr, nullptr, napi_default, nullptr},
     };
 
     status = napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);

@@ -30,3 +30,5 @@ export const getSdkFullVersion: () => NativeResult;
 export const isSdkValidate: () => NativeResult;
 export const getGimbalType: () => NativeResult;
 export const destroySdk: () => NativeResult;
+
+export const nativeAdd: (a: number, b: number) => number;

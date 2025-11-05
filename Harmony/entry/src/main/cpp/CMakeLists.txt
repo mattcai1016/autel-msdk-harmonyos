@@ -54,6 +54,7 @@ target_link_libraries(autel_sdk
     #${AUTEL_LIB_DIR}/libprotobuf.so.32
     #${AUTEL_LIB_DIR}/libautelsdk_protocol.so
     #${AUTEL_LIB_DIR}/libautelsdk.so.1
+    ${NATIVERENDER_ROOT_PATH}/../../../libs/${OHOS_ARCH}/libnativeAdd.so
 )
 
 #    ${AUTEL_LIB_DIR}/libautelch.so

@@ -66,6 +66,11 @@ struct Index {
   }
 
   async initSdk() {
+    const result: number = await autelSdk.nativeAdd(1, 1)
+    this.statusMessage = `nativeAdd: ${result}`
+
+    return
+
     this.isLoading = true;
     this.statusMessage = this.resMgr.getStringSync($r('app.string.status_initializing'));
 
