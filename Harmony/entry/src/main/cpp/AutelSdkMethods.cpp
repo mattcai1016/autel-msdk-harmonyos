@@ -21,7 +21,7 @@
 #include <memory>
 #include <string>
 #include <exception>
-#include "SdkApiManager.h"
+//#include "SdkApiManager.h"
 #include <string>
 #include <iostream>
 
@@ -30,7 +30,7 @@ const int DOMAIN = 0xFF00;
 const char *TAG = "[MsdkHarmonyMethods]";
 
 // Global SDK manager instance
-static AutelMobileSdk::SdkApiManager* g_sdkManager = nullptr;
+//static AutelMobileSdk::SdkApiManager* g_sdkManager = nullptr;
 
 // Helper function to create result object
 static napi_value CreateResultObject(napi_env env, bool success, const std::string& message) {
@@ -88,7 +88,7 @@ static napi_value InitAutelSdk(napi_env env, napi_callback_info info) {
                     isDebugMode ? "true" : "false");
 
         // Check if SDK is already initialized
-        if (g_sdkManager != nullptr) {
+        /*if (g_sdkManager != nullptr) {
             OH_LOG_Print(LOG_APP, LOG_WARN, DOMAIN, TAG, "SDK already initialized");
             return CreateResultObject(env, false, "SDK already initialized");
         }
@@ -97,7 +97,7 @@ static napi_value InitAutelSdk(napi_env env, napi_callback_info info) {
         g_sdkManager = &AutelMobileSdk::SdkApiManager::GetInstance();
 
         // Initialize SDK
-        g_sdkManager->Init(isDebugMode);
+        g_sdkManager->Init(isDebugMode);*/
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "AutelSdk SDK initialized successfully!");
 
@@ -115,14 +115,14 @@ static napi_value InitAutelSdk(napi_env env, napi_callback_info info) {
 // Get SDK version
 static napi_value GetSdkVersion(napi_env env, napi_callback_info info) {
     try {
-        if (!g_sdkManager) {
+        /*if (!g_sdkManager) {
             OH_LOG_Print(LOG_APP, LOG_ERROR, DOMAIN, TAG, "SDK not initialized");
             return CreateResultObject(env, false, "SDK not initialized");
-        }
+        }*/
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "Getting SDK version");
 
-        std::string version = g_sdkManager->GetSdkVersion();
+        std::string version = "1111";//g_sdkManager->GetSdkVersion();
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "SDK version: %s", version.c_str());
 
@@ -140,15 +140,15 @@ static napi_value GetSdkVersion(napi_env env, napi_callback_info info) {
 // Destroy SDK
 static napi_value DestroySdk(napi_env env, napi_callback_info info) {
     try {
-        if (!g_sdkManager) {
+        /*if (!g_sdkManager) {
             OH_LOG_Print(LOG_APP, LOG_ERROR, DOMAIN, TAG, "SDK not initialized");
             return CreateResultObject(env, false, "SDK not initialized");
-        }
+        }*/
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "Destroying AutelSdk SDK");
 
-        g_sdkManager->Destroy();
-        g_sdkManager = nullptr;
+        //g_sdkManager->Destroy();
+        //g_sdkManager = nullptr;
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "AutelSdk SDK destroyed successfully!");
 
@@ -166,14 +166,14 @@ static napi_value DestroySdk(napi_env env, napi_callback_info info) {
 // Get SDK full version
 static napi_value GetSdkFullVersion(napi_env env, napi_callback_info info) {
     try {
-        if (!g_sdkManager) {
+        /*if (!g_sdkManager) {
             OH_LOG_Print(LOG_APP, LOG_ERROR, DOMAIN, TAG, "SDK not initialized");
             return CreateResultObject(env, false, "SDK not initialized");
-        }
+        }*/
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "Getting SDK full version");
 
-        std::string fullVersion = g_sdkManager->GetSdkFullVersion();
+        std::string fullVersion = "11111";//g_sdkManager->GetSdkFullVersion();
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "SDK full version: %s", fullVersion.c_str());
 
@@ -191,10 +191,10 @@ static napi_value GetSdkFullVersion(napi_env env, napi_callback_info info) {
 // Check SDK validation
 static napi_value IsSdkValidate(napi_env env, napi_callback_info info) {
     try {
-        if (!g_sdkManager) {
+        /*if (!g_sdkManager) {
             OH_LOG_Print(LOG_APP, LOG_ERROR, DOMAIN, TAG, "SDK not initialized");
             return CreateResultObject(env, false, "SDK not initialized");
-        }
+        }*/
 
         size_t argc = 1;
         napi_value argv[1] = {nullptr};
@@ -210,7 +210,7 @@ static napi_value IsSdkValidate(napi_env env, napi_callback_info info) {
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "Checking SDK validation with authority state: %d", authorityState);
 
-        bool isValid = g_sdkManager->IsSdkValidate(static_cast<AutelMobileSdk::AuthorityState>(authorityState));
+        bool isValid = false;//g_sdkManager->IsSdkValidate(static_cast<AutelMobileSdk::AuthorityState>(authorityState));
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "SDK validation result: %s", 
                     isValid ? "valid" : "invalid");
@@ -229,22 +229,22 @@ static napi_value IsSdkValidate(napi_env env, napi_callback_info info) {
 // Get gimbal type
 static napi_value GetGimbalType(napi_env env, napi_callback_info info) {
     try {
-        if (!g_sdkManager) {
+        /*if (!g_sdkManager) {
             OH_LOG_Print(LOG_APP, LOG_ERROR, DOMAIN, TAG, "SDK not initialized");
             return CreateResultObject(env, false, "SDK not initialized");
-        }
+        }*/
 
         OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "Getting gimbal type");
 
-        AutelMobileSdk::GimbalType gimbalType = g_sdkManager->GetGimbalType();
+        //AutelMobileSdk::GimbalType gimbalType = g_sdkManager->GetGimbalType();
 
-        OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "Gimbal type: %d", static_cast<int>(gimbalType));
+        //OH_LOG_Print(LOG_APP, LOG_INFO, DOMAIN, TAG, "Gimbal type: %d", static_cast<int>(gimbalType));
 
         napi_value result = CreateResultObject(env, true, "Gimbal type retrieved successfully");
 
-        napi_value gimbalTypeValue;
-        napi_create_int32(env, static_cast<int32_t>(gimbalType), &gimbalTypeValue);
-        napi_set_named_property(env, result, "gimbalType", gimbalTypeValue);
+        //napi_value gimbalTypeValue;
+        //napi_create_int32(env, static_cast<int32_t>(gimbalType), &gimbalTypeValue);
+        //napi_set_named_property(env, result, "gimbalType", gimbalTypeValue);
 
         return result;
 
